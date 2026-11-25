@@ -1,0 +1,16 @@
+name: Test Run
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  test-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+    
+      - name: Hello World
+        run: echo "Hello, World!"
